@@ -62,7 +62,7 @@ function checkLine(c1, c2, c3){
 }
 
 function showWinner(player){
-    resultado.innerHTML = player + " es el ganador"
+    resultado.innerHTML = '¡' + player + " es el ganador!"
     btnReset.hidden = false
     casillas.forEach(casilla => {
         casilla.style.display = 'disabled'
