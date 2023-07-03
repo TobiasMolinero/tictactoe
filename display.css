@@ -89,11 +89,14 @@
     text-shadow: 1px 1px 5px red;
 }
 
-.container-btn-reset{
+.container-buttons{
     margin-top: 20px;
     display: flex;
     justify-content: center;
 }
+
+
+
 
 
 

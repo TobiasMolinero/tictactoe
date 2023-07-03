@@ -4,6 +4,7 @@ const btnPlay = document.querySelector('#btnPlay')
 const playerTurn = document.querySelector('.player-turn')
 let playerTurnValue = document.querySelector('#player-turn-value')
 const btnReset = document.querySelector('#btnReset')
+const btnExit = document.querySelector('#btnExit')
 let gridGame = document.querySelector('.grid-container')
 
 
@@ -19,6 +20,7 @@ for(let i = 0; i < casillas.length; i++){
 playerTurn.hidden = true
 gridGame.style.display = 'none'
 btnReset.hidden = true
+btnExit.hidden = true
 playerTurnValue.innerHTML = isPlayerOne ? 'X' : 'O'
 
 const startGame = () => {
@@ -27,6 +29,7 @@ const startGame = () => {
     playerTurn.hidden = false
     gridGame.style.display = 'grid'
     btnReset.hidden = false
+    btnExit.hidden = false
 }
 
 function userMove(e){
@@ -73,4 +76,8 @@ function reiniciar(){
     resultado.innerHTML = ""
     isPlayerOne = true
     playerTurnValue.innerHTML = 'X'
+}
+
+const exitGame = () => {
+    window.location.reload()
 }
