@@ -1,0 +1,134 @@
+.container{
+    margin-top: 30px;
+    width: max(500px);
+}
+
+.title{
+    font-family: 'Press Start 2P', cursive;
+    color: #ff0000;
+    text-align: center;
+    font-size: 45px;
+    padding: 10px 0;
+    text-shadow: 1px 1px 12px #ff0000;
+}
+
+.sub-title{
+    font-family: 'Prompt', sans-serif;
+    text-align: end;
+    color: white;
+}
+
+.container-btn{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-play{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 30px;
+    box-shadow: 0 0 6px 1px #ff0000;
+    border: 2px solid #ff0000;
+    transition: box-shadow 0.5s;
+}
+
+.btn-play:hover{
+    cursor: pointer;
+    box-shadow:  0 0 10px 3px #ff0000
+}
+
+.btn-play:active{
+    background-color: red;
+}
+
+.players-container{
+    margin-top: 20px;
+    display: flex;
+}
+
+.player-label{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: white;
+    filter: drop-shadow(0 0 1px #ff0000);
+}
+
+.player{
+    font-size: 1.8rem;
+}
+
+.player-turn{
+    text-align: center;
+    margin: 20px 0 10px 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: white;
+    filter: drop-shadow(0 0 1px #ff0000);
+}
+
+.press-start-advice{
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 2.3rem;
+    color: red;
+    text-align: center;
+    margin-top: 60px;
+    text-shadow: 1px 1px 12px #ff0000;
+    animation: onOff 8s infinite backwards;
+}
+
+.result{
+    color: white;
+    margin-top: 15px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
+    text-shadow: 1px 1px 5px red;
+}
+
+.container-btn-reset{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.flicker1{
+    animation: parpadear 2s infinite backwards steps(3)
+}
+.flicker2{
+    animation: parpadear 2.5s infinite backwards steps(4)
+}
+.flicker3{
+    animation: parpadear 1.5s infinite backwards steps(2)
+}
+
+@keyframes parpadear{
+    to {
+        color: #530505;
+        text-shadow: none;
+    }
+}
+
+@keyframes onOff {
+    from {
+        color: red;
+        text-shadow: 1px 1px 12px #ff0000;
+    }
+    25%{
+        color: #530505;
+        text-shadow: none;
+    }
+    50%{
+        color: red;
+        text-shadow: 1px 1px 12px #ff0000;
+    }
+    75%{
+        color: #530505;
+        text-shadow: none;
+    }    
+}
