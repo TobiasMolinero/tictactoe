@@ -64,14 +64,15 @@ function checkLine(c1, c2, c3){
 function showWinner(player){
     resultado.innerHTML = '¡' + player + " is the winner!"
     btnReset.hidden = false
-    casillas.forEach(casilla => {
-        casilla.style.display = 'disabled'
-    });
+    for(let i = 0; i < casillas.length; i++){
+        casillas[i].removeEventListener('click', userMove)
+    }
 }
 
 function reiniciar(){
     for (let i = 0; i < casillas.length; i++){
         casillas[i].innerHTML = ""
+        casillas[i].addEventListener('click', userMove)
     }
     resultado.innerHTML = ""
     isPlayerOne = true
