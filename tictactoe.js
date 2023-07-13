@@ -62,6 +62,7 @@ function checkLine(c1, c2, c3){
 }
 
 function showWinner(player){
+    resultado.style.fontSize = '35px'
     resultado.innerHTML = '¡' + player + " is the winner!"
     btnReset.hidden = false
     for(let i = 0; i < casillas.length; i++){
