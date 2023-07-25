@@ -1,4 +1,3 @@
-
 const pressStartAdvice = document.querySelector('.press-start-advice')
 const btnPlay = document.querySelector('#btnPlay')
 const playerTurn = document.querySelector('.player-turn')
@@ -6,6 +5,7 @@ let playerTurnValue = document.querySelector('#player-turn-value')
 const btnReset = document.querySelector('#btnReset')
 const btnExit = document.querySelector('#btnExit')
 let gridGame = document.querySelector('.grid-container')
+const modal = document.querySelector('.modal')
 
 
 
@@ -62,8 +62,9 @@ function checkLine(c1, c2, c3){
 }
 
 function showWinner(player){
-    resultado.style.fontSize = '35px'
     resultado.innerHTML = '¡' + player + " is the winner!"
+    modal.style.zIndex = '1'
+    modal.style.opacity = '0.9'
     btnReset.hidden = false
     for(let i = 0; i < casillas.length; i++){
         casillas[i].removeEventListener('click', userMove)
@@ -75,6 +76,8 @@ function reiniciar(){
         casillas[i].innerHTML = ""
         casillas[i].addEventListener('click', userMove)
     }
+    modal.style.zIndex = '-1'
+    modal.style.opacity = '0'
     resultado.innerHTML = ""
     isPlayerOne = true
     playerTurnValue.innerHTML = 'X'

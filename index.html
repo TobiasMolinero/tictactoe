@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="estilos.css">
     <link rel="stylesheet" href="display.css">
     <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="modal.css">
     <script src="tictactoe.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,11 +16,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Oxygen:wght@300;400;700&family=Passion+One:wght@400;700&family=Press+Start+2P&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Staatliches&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
+    <div">
         <h1 class="title"><span class="flicker1">Tic </span><span class="flicker2">Tac </span><span class="flicker3">Toe</span></h1>
         <h6 class="sub-title"><i>by Tobias Molinero, 2023 &#169;</i></h6>
         <div class="container-btn">
-            <button id="btnPlay" class="btn-play" onclick="startGame()">Start Game</button>
+            <a href="#grid-game"><button id="btnPlay" class="btn-play" onclick="startGame()">Start Game</button></a>
         </div>
         <p class="player-turn">Next player: <span id="player-turn-value" class="player"></span></p>
         <h2 class="press-start-advice">Press Start Game to play</h2> 
@@ -35,10 +36,14 @@
             <div class="grid-box"></div>
         </div>
         <div>
-            <h2 class="result"></h2>
             <div class="container-buttons">
-                <button id="btnReset" class="btn-play" onclick="reiniciar()">Reset Game</button>
                 <button id="btnExit" class="btn-play" onclick="exitGame()">Exit Game</button>
+            </div>
+        </div>
+        <div class="modal">
+            <div>
+                <h2 class="result">X es el ganador</h2>
+                <button id="btnReset" class="btn-play" onclick="reiniciar()">Reset Game</button>
             </div>
         </div>
     </div>
